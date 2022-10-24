@@ -23,8 +23,8 @@ namespace Full_GRASP_And_SOLID
 
             Recipe recipe = new Recipe();
             recipe.FinalProduct = catalog1.GetProduct("Café con leche");
-            recipe.AddStep(new Step(catalog1.GetProduct("Café"), 100, catalog1.GetEquipment("Cafetera"), 120));
-            recipe.AddStep(new Step(catalog1.GetProduct("Leche"), 200, catalog1.GetEquipment("Hervidor"), 60));
+            recipe.AddStep(catalog1.GetProduct("Café"), 100, catalog1.GetEquipment("Cafetera"), 120);
+            recipe.AddStep(catalog1.GetProduct("Leche"), 200, catalog1.GetEquipment("Hervidor"), 60);
 
             IPrinter printer;
             printer = new ConsolePrinter();
